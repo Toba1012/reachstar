@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   
   get '/comments/:topic_id/new', to: 'comments#new', as: 'comments'
   post '/comments/:topic_id/create', to: 'comments#create', as: 'comments_create'
+  
+  get 'favorites/index'
+  post '/favorites', to: 'favorites#create'
+  
 end
