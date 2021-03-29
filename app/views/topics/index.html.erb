@@ -13,6 +13,10 @@
               <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
                 <%= image_tag 'icons/heart_black.png', class: 'topic-index-icon' %>
               <% end %>
+            <% else %>
+              <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+                <i class="fa fa-heart fa-2x" style="color:red;" aria-hidden="true"></i>
+              <% end %>
             <% end %>
             
             <%= link_to comments_path(topic_id: topic.id) do %>
