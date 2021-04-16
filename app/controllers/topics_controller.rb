@@ -3,6 +3,10 @@ class TopicsController < ApplicationController
     @topics = Topic.all.includes(:favorite_users)
   end
   
+  def show
+    @topic = Topic.find(params[:id])
+  end
+  
   def new
     @topic = Topic.new
   end
